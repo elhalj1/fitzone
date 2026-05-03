@@ -1,0 +1,21 @@
+name: Quick Dev Build
+
+# Workflow manuel pour builds de développement rapides
+# Usage: npx eas-cli@latest workflow:run dev-build.yml
+
+jobs:
+    build_android_development:
+        name: Build Android (Development)
+        type: build
+        params:
+            platform: android
+            profile: development
+            # Build de développement avec metro bundler local
+
+    build_ios_development:
+        name: Build iOS (Development)
+        type: build
+        params:
+            platform: ios
+            profile: development
+            # Build de développement avec metro bundler local
